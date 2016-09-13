@@ -1,17 +1,12 @@
 <?php
 
-
-use Illuminate\Foundation\Testing\WithoutMiddleware;
-use Illuminate\Foundation\Testing\DatabaseMigrations;
-use Illuminate\Foundation\Testing\DatabaseTransactions;
-
 use App\Note;
 
 class NotesTest extends TestCase
 {
 
     /**
-     * Comprobamos cuando un usuario visite la pagina notes, pueda ver la primera nota
+     * Comprobamos cuando un usuario visite la pagina notes, pueda ver la primera y segunda nota
      */
     public function test_notes_list()
     {
@@ -19,7 +14,7 @@ class NotesTest extends TestCase
         /**
          * -------------> Having (Teniendo) <-------------
          *
-         *      Base de las pruebas, condiciones apra hacer la prueba
+         *      Base de las pruebas, condiciones para hacer la prueba
          *
          * Usamos Eloquent para crear las 2 notas en la Database
          */
@@ -28,7 +23,7 @@ class NotesTest extends TestCase
         /**
          * -------------> When (Cuando) <-------------
          *
-         *      Definimos las acciones que aria en usuario
+         *      Definimos las acciones que aria el usuario
          *
          * Verificamos que el usuario al ingresar a la seccion "notes" vea por lo menos dos notas
          */

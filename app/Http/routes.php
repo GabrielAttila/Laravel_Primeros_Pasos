@@ -12,6 +12,8 @@
 */
 
 use App\Note;
+use Illuminate\Support\Facades\Route;
+
 
 Route::get('/', function () {
     return view('welcome');
@@ -37,3 +39,11 @@ Route::get(
      */
     return view('notes', compact('notes'));
 });
+
+Route::get('/notes/{note}/{slug?}', function ($note, $slug = null){
+   dd($note, $slug);
+/**
+ * Restringimos una cadena de string para la variable note
+ * para ello solo necesitamos que nuestro parametro contenga numeros del '0-9' '+' x cantidad de numeros
+ */
+})->where('note', '[0-9]+');
