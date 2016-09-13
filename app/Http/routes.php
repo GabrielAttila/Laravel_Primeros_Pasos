@@ -40,6 +40,12 @@ Route::get(
     return view('notes', compact('notes'));
 });
 
+Route::post('/notes', function () {
+
+    return "Creating a note";
+
+});
+
 Route::get('/notes/{note}/{slug?}', function ($note, $slug = null){
    dd($note, $slug);
 /**

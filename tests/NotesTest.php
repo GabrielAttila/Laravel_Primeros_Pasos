@@ -1,16 +1,18 @@
 <?php
 
+use Illuminate\Foundation\Testing\WithoutMiddleware;
+
 use App\Note;
 
 class NotesTest extends TestCase
 {
-
+    // desactivamos los Middleware para hacer la pruebas con post, get etc...
+    use WithoutMiddleware;
     /**
      * Comprobamos cuando un usuario visite la pagina notes, pueda ver la primera y segunda nota
      */
     public function test_notes_list()
     {
-
         /**
          * -------------> Having (Teniendo) <-------------
          *
@@ -35,5 +37,14 @@ class NotesTest extends TestCase
              */
              ->see('My first note')
              ->see('Second note');
+    }
+
+    public function test_create_note()
+    {
+        // Route::post('notes')
+        // When
+        $this->post('notes')
+             // Then
+             ->see('Creating a note');
     }
 }

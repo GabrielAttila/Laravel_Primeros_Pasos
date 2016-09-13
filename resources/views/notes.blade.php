@@ -17,5 +17,13 @@
             </li>
         @endforeach
     </ul>
+
+
+
+    <form method="POST">
+        {!! csrf_field() !!}
+        <textarea title="ingrese texto"></textarea>
+        <button type="submit">Create note</button>
+    </form>
 </body>
 </html>
