@@ -22,8 +22,7 @@ Route::get('/', function () {
 /**
  * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
  */
-Route::get(
-    '/notes', function () {
+Route::get('/notes', function () {
 
     /**
      * Cargamos todas las notas de la Database
@@ -37,12 +36,20 @@ Route::get(
     /**
      * pasamos como segundo parametro la funcion "compac" la cual genera un array asociativo
      */
-    return view('notes', compact('notes'));
+    return view('notes/list', compact('notes'));
 });
+
+
 
 Route::post('/notes', function () {
 
     return "Creating a note";
+
+});
+
+Route::get('/notes/create', function () {
+
+    return view('notes/create');
 
 });
 
