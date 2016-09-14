@@ -11,7 +11,6 @@
 |
 */
 
-use App\Note;
 use Illuminate\Support\Facades\Route;
 
 
@@ -19,44 +18,9 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-/**
- * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
- */
-Route::get('/notes', function () {
+Route::get('/notes', 'NotesController@index');
+Route::post('/notes', 'NotesController@store');
 
-    /**
-     * Cargamos todas las notas de la Database
-     */
-    $notes = Note::all();
+Route::get('/notes/create', 'NotesController@create');
 
-    /**
-     * Imprimimos la variable "notes" con el helper de laravel llamado "dd"
-     */
-    //dd($notes);
-    /**
-     * pasamos como segundo parametro la funcion "compac" la cual genera un array asociativo
-     */
-    return view('notes/list', compact('notes'));
-});
-
-
-
-Route::post('/notes', function () {
-
-    return "Creating a note";
-
-});
-
-Route::get('/notes/create', function () {
-
-    return view('notes/create');
-
-});
-
-Route::get('/notes/{note}/{slug?}', function ($note, $slug = null){
-   dd($note, $slug);
-/**
- * Restringimos una cadena de string para la variable note
- * para ello solo necesitamos que nuestro parametro contenga numeros del '0-9' '+' x cantidad de numeros
- */
-})->where('note', '[0-9]+');
+Route::get('/notes/{note}', 'NotesController@show')->where('note', '[0-9]+');

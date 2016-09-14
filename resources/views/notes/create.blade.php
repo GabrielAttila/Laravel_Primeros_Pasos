@@ -2,6 +2,6 @@
 
 @section('content')
 
-<h1>Create on note</h1>
+<h1>Creating a note</h1>
 
 @endsection

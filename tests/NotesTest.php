@@ -43,7 +43,7 @@ class NotesTest extends TestCase
     {
         // Route::post('notes')
         // When
-        $this->post('notes')
+        $this->visit('notes/create')
              // Then
              ->see('Creating a note');
     }
