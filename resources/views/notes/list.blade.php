@@ -3,7 +3,7 @@
 @section('content')
 
     <h2>Notes</h2>
-
+    <a href="{{ url('notes/create') }}"> Add a note </a>
     <ul>
         @foreach($notes as $note)
             <li>
