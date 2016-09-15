@@ -36,6 +36,23 @@ class NotesController extends Controller
      */
     public function store()
     {
+
+        /**
+         * Este metodo requiere de 2 argumentos:
+         *
+         * 1 - Peticion del usuario "request" usaremos la funcion helper de laravel
+         *
+         * 2 - Pasamos el array de reglas espesificando entre llaves los nombres de los campos
+         */
+        $this->validate(request(), [
+            /**
+             * 1 - nombre del campo
+             *
+             * 2 - Diferentes reglas de validacion
+             */
+            'note' => ['required', 'max:200']
+        ]);
+
         $data = request()->all();
 
         Note::create($data);
