@@ -1,13 +1,18 @@
 <?php
 
-use Illuminate\Foundation\Testing\WithoutMiddleware;
+//use Illuminate\Foundation\Testing\WithoutMiddleware;
+
+use \Illuminate\Foundation\Testing\DatabaseTransactions;
 
 use App\Note;
 
 class NotesTest extends TestCase
 {
     // desactivamos los Middleware para hacer la pruebas con post, get etc...
-    use WithoutMiddleware;
+    //use WithoutMiddleware;
+
+    // ejecutamos todas las pruebas dentro de una transaccion en la base de datos
+    use DatabaseTransactions;
     /**
      * Comprobamos cuando un usuario visite la pagina notes, pueda ver la primera y segunda nota
      */
