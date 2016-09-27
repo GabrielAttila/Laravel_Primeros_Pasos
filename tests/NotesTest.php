@@ -59,13 +59,13 @@ class NotesTest extends TestCase
              ->see('Create a note')
              // Y escribimos 'A new note' en un campo llamado 'note'
              ->type('A new note', 'note')
-             // Y al presional el boton Create note
+             // Y al presionar el boton Create note
              ->press('Create note')
-             // Vamos hacer llevados de vuelta a la pagina listado de notas
+             // Vamos hacer llevados de vuelta a la pagina "listado de notas"
              ->seePageIs('notes')
              // Y vamos a ver el texto 'A new note' el cual escribimos con anterioridad
              ->see('A new note')
-             // Y vamos a tener esta nota en registrada en la Database
+             // Y vamos a tener esta nota registrada en la Database
              ->seeInDatabase('notes',[
                  'note' => 'A new note'
              ]);

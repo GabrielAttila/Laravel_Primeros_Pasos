@@ -12,9 +12,11 @@ class NotesController extends Controller
     public function index()
     {
         /**
-         * Cargamos todas las notas de la Database
+         * Cargamos todas las notas de la Database y con paginate() creamos una paginacion
+         * para mostrarlas enciandole como parametro el numero de elementos que queremos
+         * morestrar
          */
-        $notes = Note::all();
+        $notes = Note::paginate(20);
 
         /**
          * Imprimimos la variable "notes" con el helper de laravel llamado "dd"

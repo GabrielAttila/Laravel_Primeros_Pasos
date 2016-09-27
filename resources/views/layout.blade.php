@@ -7,7 +7,7 @@
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
     <meta name="description" content="">
     <meta name="author" content="">
-    <link rel="icon" href="../../favicon.ico">
+    <!--link rel="icon" href="../../favicon.ico"-->
 
     <title>Starter Template for Bootstrap</title>
 
@@ -49,24 +49,20 @@
         </div>
         <div id="navbar" class="collapse navbar-collapse">
             <ul class="nav navbar-nav">
-                <li class="active"><a href="#">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#contact">Contact</a></li>
+                <li class="active"><a href="#Home">Home</a></li>
+                <li><a href="#About">About</a></li>
+                <li><a href="#Contact">Contact</a></li>
             </ul>
         </div><!--/.nav-collapse -->
     </div>
 </nav>
 
 <div class="container">
-
     @yield('content')
-
-    <hr>
-
-    <p>&copy; 2016 http://gabrielattila.com</p>
-
 </div><!-- /.container -->
+<hr>
 
+<p>&copy; 2016 http://gabrielattila.com</p>
 
 <!-- Bootstrap core JavaScript
 ================================================== -->

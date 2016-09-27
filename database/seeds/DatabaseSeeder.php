@@ -15,6 +15,10 @@ class DatabaseSeeder extends Seeder
         Model::unguard();
 
         // $this->call(UserTableSeeder::class);
+        /**
+         * Llamamos a todos los seeder creados para su posterior uso
+         */
+        $this->call(NoteTableSeeder::class);
 
         Model::reguard();
     }
