@@ -16,7 +16,7 @@ class NoteTableSeeder extends Seeder
         /**for ($i = 1; $i <= 100; $i++){
             Note::create(['note' => "Note $i"]);
         }**/
-        // Combinamos seeders con factory
+        // Combinamos seeders con factory.
         /**
          * 1: Llamamos al modelo factory
          * 2: Referenciamos al nombre de la clase
