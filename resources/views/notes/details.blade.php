@@ -1,8 +1,7 @@
-<?php
 @extends('layout')
 
 @section('content')
 
-
+    {{ $note }}
 
 @endsection

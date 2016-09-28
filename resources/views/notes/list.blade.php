@@ -9,15 +9,15 @@
     <ul class="list-group">
         @foreach($notes as $note)
             <li class="list-group-item">
+                <p>
+                    <a href='{{ url("notes/$note->id") }}'>View note</a>
+                </p>
                 @if($note->category)
-                    <p>
-                        <a href='{{ url("notes/$note->id") }}'> View note </a>
-                    </p>
                     <label class="label label-info">{{ $note->category->name }}:</label>
                 @else
                     <span class="label label-info">Other</span>
                 @endif
-                {{ $note->note }}
+                {{ str_limit($note->note, $limit = 100, $end = '...') }}
             </li>
         @endforeach
     </ul>

@@ -12,8 +12,8 @@ class NoteExerciseTest extends TestCase
      */
     public function test_notes_summary_and_notes_details()
     {
-        $text = 'Begin of the note. Occaecati qui porro velit asperiores voluptas consequuntur soluta. Qui distinctio enim possimus. Aut nisi quisquam est a sint alias officiis cupiditate. Consequatur corrupti aut commodi consequatur hic quos quo qui.';
-        $text .= 'End of the note.';
+        $text = 'Begin of the note. Occaecati qui porro velit asperiores voluptas consequuntur soluta. Qui distinctio enim possimus. Aut nisi quisquam est a sint alias officiis cupiditate. Consequatur corrupti aut commodi consequatur hic quos quo qui. ';
+        $text += 'End of the note.';
 
         $note = Note::create(['note' => $text]);
 

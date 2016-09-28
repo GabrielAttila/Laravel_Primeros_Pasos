@@ -62,8 +62,16 @@ class NotesController extends Controller
         return redirect()->to('notes');
     }
 
-    public function show($note)
+    public function show($id)
     {
-        dd($note);
+        $note = Note::find($id);
+        /**
+         * Imprimimos la variable "notes" con el helper de laravel llamado "dd"
+         */
+        //dd($notes);
+        /**
+         * pasamos como segundo parametro la funcion "compac" la cual genera un array asociativo
+         */
+        return view('notes/details', $note);
     }
 }
