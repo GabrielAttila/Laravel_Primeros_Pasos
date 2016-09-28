@@ -9,15 +9,13 @@
     <ul class="list-group">
         @foreach($notes as $note)
             <li class="list-group-item">
-                <p>
-                    <a href='{{ url("notes/$note->id") }}'>View note</a>
-                </p>
                 @if($note->category)
                     <label class="label label-info">{{ $note->category->name }}:</label>
                 @else
                     <span class="label label-info">Other</span>
                 @endif
-                {{ str_limit($note->note, $limit = 100, $end = '...') }}
+                {{ substr($note->note, 0, 100) }}...
+                <a class="small" href='{{ url("notes/".$note->id) }}'>View note</a>
             </li>
         @endforeach
     </ul>

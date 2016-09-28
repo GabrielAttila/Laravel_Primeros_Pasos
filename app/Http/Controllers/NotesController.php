@@ -72,6 +72,6 @@ class NotesController extends Controller
         /**
          * pasamos como segundo parametro la funcion "compac" la cual genera un array asociativo
          */
-        return view('notes/details', $note);
+        return view('notes/details', ['note' => $note]);
     }
 }
