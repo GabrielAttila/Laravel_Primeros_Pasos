@@ -16,7 +16,7 @@ class NotesController extends Controller
          * para mostrarlas enciandole como parametro el numero de elementos que queremos
          * morestrar
          */
-        $notes = Note::paginate(20);
+        $notes = Note::paginate(25);
 
         /**
          * Imprimimos la variable "notes" con el helper de laravel llamado "dd"

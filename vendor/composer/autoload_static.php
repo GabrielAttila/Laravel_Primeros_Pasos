@@ -278,6 +278,7 @@ class ComposerStaticInitb14cf9f606c002872e8060a25bc9844f
 
     public static $classMap = array (
         'AddCategoriesColumnToNotes' => __DIR__ . '/../..' . '/database/migrations/2016_09_16_004444_add_categories_column_to_notes.php',
+        'CategoryTableSeeder' => __DIR__ . '/../..' . '/database/seeds/CategoryTableSeeder.php',
         'CreateCategoriesTable' => __DIR__ . '/../..' . '/database/migrations/2016_09_16_003850_create_categories_table.php',
         'CreateNotesTable' => __DIR__ . '/../..' . '/database/migrations/2016_09_13_012600_create_notes_table.php',
         'CreatePasswordResetsTable' => __DIR__ . '/../..' . '/database/migrations/2014_10_12_100000_create_password_resets_table.php',

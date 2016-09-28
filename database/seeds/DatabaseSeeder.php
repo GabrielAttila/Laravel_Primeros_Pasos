@@ -18,6 +18,7 @@ class DatabaseSeeder extends Seeder
         /**
          * Llamamos a todos los seeder creados para su posterior uso
          */
+        $this->call(CategoryTableSeeder::class);
         $this->call(NoteTableSeeder::class);
 
         Model::reguard();

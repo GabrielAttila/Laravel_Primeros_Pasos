@@ -15,4 +15,13 @@ class Note extends Model
      */
     protected $fillable = ['note'];
 
+    /**
+     * Creamos un metodo llamado Category el cual retornara una relacion de eloquent en este caso
+     * llamada "belongsTo()" porque una nota pertenese a una categoria y paramos como argumento
+     * el modelo relacionado
+     */
+    public function category()
+    {
+        return $this->belongsTo(Category::class);
+    }
 }

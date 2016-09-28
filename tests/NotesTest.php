@@ -53,7 +53,7 @@ class NotesTest extends TestCase
         $this->visit('notes')
              // Y precionamos un enlace llamado 'Add a note'
              ->click('Add a note')
-             // Al precionar el enlace nos lleva a una nueva pagina 'notes/create'
+             // Nos lleva a una nueva pagina 'notes/create'
              ->seePageIs('notes/create')
              // Donde vamos a ver un titulo ej: 'Create a note'
              ->see('Create a note')

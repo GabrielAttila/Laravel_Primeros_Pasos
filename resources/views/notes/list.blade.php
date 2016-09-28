@@ -6,16 +6,20 @@
     <p>
         <a href="{{ url('notes/create') }}"> Add a note </a>
     </p>
-    <ul>
+    <ul class="list-group">
         @foreach($notes as $note)
-            <li>
+            <li class="list-group-item">
+                @if($note->category)
+                    <p>
+                        <a href='{{ url("notes/$note->id") }}'> View note </a>
+                    </p>
+                    <label class="label label-info">{{ $note->category->name }}:</label>
+                @else
+                    <span class="label label-info">Other</span>
+                @endif
                 {{ $note->note }}
             </li>
         @endforeach
     </ul>
-    <!--
-        Colocamos este render de la variable note para imprimir una paginacion en laravel :D
-    !>
     {!! $notes->render() !!}
-
 @endsection
